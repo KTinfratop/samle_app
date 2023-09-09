@@ -11,5 +11,12 @@
       <span class="list-title"><%=link_to list.title, list_path(list.id) %></span>
     </div>
   </div>
+  
+   <p>画像</p>
+  <% if list.image.attached? %>
+    <%= image_tag list.image, size: "200x200" %>
+  <% else %>
+    <%= image_tag 'no_image', size: "200x200" %>
+  <% end %>
 <% end %>
 </div>
