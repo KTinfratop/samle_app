@@ -12,6 +12,7 @@ class ListsController < ApplicationController
       flash[:notice] = "投稿に成功しました。"
       redirect_to list_path(@list.id)
     else
+      flash.now[:alert] = "投稿に失敗しました。"
       render :new
     end
   end
